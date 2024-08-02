@@ -1,0 +1,37 @@
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  transition: margin-left 0.3s;
+  top: 40px;
+
+  &.closed {
+    transform: translateX(-300px);
+  }
+
+  nav ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+          margin-bottom: 1rem;
+
+          a {
+              color: white;
+              text-decoration: none;
+
+              &.active {
+                  font-weight: bold;
+              }
+          }
+      }
+  }
+
+  @media (max-width: 768px) {
+      display: none;
+  }
+}

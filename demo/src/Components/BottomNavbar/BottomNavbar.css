@@ -1,0 +1,46 @@
+
+.bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000;
+
+    .nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+
+        color: rgb(250, 156, 244);
+
+        .nav-icon {
+            font-size: 1.5rem;
+        }
+
+        .rainbow-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: conic-gradient(red, yellow, green, cyan, blue, magenta, red);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .nav-item:nth-child(1) {
+        color: #e02991;
+        border-radius: 50%;
+        padding: 1px;
+    }
+}
