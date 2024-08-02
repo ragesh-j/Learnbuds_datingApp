@@ -1,0 +1,39 @@
+.header {
+  background-color: #f5ebf5; /* Background color to match the image */
+  border-bottom: 1px solid #ddd;
+}
+
+.title {
+  color: #6a1b9a; /* Color for the title to match the design */
+  font-size: 1.5rem;
+  margin-left: 10px; /* Margin to create space between the icon and the title */
+}
+
+.menuIcon {
+  color: #6a1b9a; /* Menu icon color */
+  margin-right: 10px;
+}
+
+.notificationIcon {
+  position: relative;
+  margin-right: 15px; /* Space between the icon and the avatar */
+}
+
+.iconCircle {
+  width: 40px;
+  height: 40px;
+  background-color: white; /* Circle background color */
+  border: 1px solid #6a1b9a; /* Circle border color */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a1b9a; /* Icon color */
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ddd; /* Border around the avatar to match the design */
+}
