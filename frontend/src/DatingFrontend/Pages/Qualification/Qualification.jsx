@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSlidersH, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faSliders } from '@fortawesome/free-solid-svg-icons';
 import styles from './qualification.module.css';
 import Footer from '../../Components/Footer/Footer';
 import LikeAndConnect from '../../Components/LikeAndConnect/LikeAndConnect';
@@ -23,9 +23,9 @@ const Qualification = () => {
   return (
     <Container fluid className={styles.userPages}>
       <div className={styles.header}>
-        <FontAwesomeIcon icon={faChevronLeft} className={styles.roundButton} onClick={handleLeftArrowClick}  />
+        <FontAwesomeIcon icon={faChevronLeft} transform="shrink-8" className={styles.roundButton} onClick={handleLeftArrowClick} />
         <div className={styles.pageTitle}>Qualification</div>
-        <FontAwesomeIcon icon={faSlidersH} className={styles.roundButton} onClick={handleSliderClick} />
+        <FontAwesomeIcon icon={faSliders}  transform="shrink-8" className={styles.roundButton} onClick={handleSliderClick} />
       </div>
 
       {showNavigation && (

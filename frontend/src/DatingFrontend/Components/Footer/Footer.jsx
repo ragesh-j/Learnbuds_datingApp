@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faCompass, faUsers, faCommentDots } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faCompass, faUserGroup, faComment } from '@fortawesome/free-solid-svg-icons';
 import styles from './footer.module.css';
 
 const Footer = () => {
@@ -12,8 +12,8 @@ const Footer = () => {
     { icon: faHome, id: 0, path: '/userhome' },
     { icon: faCompass, id: 1, path: '/explore' },
     { icon: 'rainbow', id: 2, path: '/rainbow' },
-    { icon: faUsers, id: 3, path: '/qualification' },
-    { icon: faCommentDots, id: 4, path: '/messages' }
+    { icon: faUserGroup, id: 3, path: '/qualification' },
+    { icon: faComment, id: 4, path: '/messages' }
   ];
 
   const determineActiveIndex = (pathname) => {

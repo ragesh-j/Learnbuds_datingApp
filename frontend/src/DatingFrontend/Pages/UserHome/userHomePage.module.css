@@ -4,4 +4,6 @@
     padding: 0;
     margin: 0;
   }
-  
+  .blurBackground {
+    filter: blur(20px);
+  }

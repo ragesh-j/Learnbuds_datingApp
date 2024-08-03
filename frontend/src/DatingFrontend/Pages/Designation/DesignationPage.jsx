@@ -24,9 +24,9 @@ const DesignationPage = () => {
   return (
     <Container fluid className={styles.userPages}>
       <div className={styles.header}>
-        <FontAwesomeIcon icon={faChevronLeft} className={styles.roundButton} onClick={handleLeftArrowClick} />
+        <FontAwesomeIcon icon={faChevronLeft} transform="shrink-8" className={styles.roundButton} onClick={handleLeftArrowClick} />
         <div className={styles.pageTitle}>Designation</div>
-        <FontAwesomeIcon icon={faSlidersH} className={styles.roundButton} onClick={handleSliderClick} />
+        <FontAwesomeIcon icon={faSlidersH} transform="shrink-8" className={styles.roundButton} onClick={handleSliderClick} />
       </div>
 
       {showNavigation && (

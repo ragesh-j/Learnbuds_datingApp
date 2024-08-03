@@ -15,6 +15,7 @@ const Header = () => {
         <div className={styles.notificationIcon}>
           <div className={styles.iconCircle}>
             <FontAwesomeIcon icon={faBellRegular} size="lg" />
+            <div className={styles.notificationDot}></div>
           </div>
         </div>
         <img src="/path/to/user-avatar.jpg" alt="User Avatar" className={styles.avatar} />

@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSlidersH, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import styles from './locationPage.module.css';
+import styles from './matchesPage.module.css';
 import Footer from '../../Components/Footer/Footer';
 import LikeAndConnect from '../../Components/LikeAndConnect/LikeAndConnect';
 import { Link, useNavigate } from 'react-router-dom';
 import ProfileCard from '../../Components/ProfileCard/ProfileCard';
-import matches from '../../../SampleData.js';
+import matches from '../../../SampleData.js'; 
 
-const LocationPage = () => {
+function MatchesPage() {
   const [showNavigation, setShowNavigation] = useState(false);
   const navigate = useNavigate();
 
@@ -19,18 +19,18 @@ const LocationPage = () => {
   const handleLeftArrowClick = () => {
     navigate('/userhome');
   }
-
   return (
     <Container fluid className={styles.userPages}>
       <div className={styles.header}>
-        <FontAwesomeIcon icon={faChevronLeft} transform="shrink-8" className={styles.roundButton} onClick={handleLeftArrowClick}/>
-        <div className={styles.pageTitle}>Location</div>
+        <FontAwesomeIcon icon={faChevronLeft} transform="shrink-8" className={styles.roundButton} onClick={handleLeftArrowClick}  />
+        <div className={styles.pageTitle}>Matches</div>
         <FontAwesomeIcon icon={faSlidersH} transform="shrink-8" className={styles.roundButton} onClick={handleSliderClick} />
       </div>
 
       {showNavigation && (
         <div className={styles.navigationList}>
           <div className={styles.navigationItem}><Link to='/qualification' className={styles.navigationLink}>Qualification</Link></div>
+          <div className={styles.navigationItem}><Link to='/location' className={styles.navigationLink}>Location</Link></div>
           <div className={styles.navigationItem}><Link to='/designation' className={styles.navigationLink}>Designation</Link></div>
         </div>
       )}
@@ -57,7 +57,7 @@ const LocationPage = () => {
 
       <Footer />
     </Container>
-  );
-};
+  )
+}
 
-export default LocationPage;
+export default MatchesPage
