@@ -1,16 +1,16 @@
 import React from 'react'
-import "./LeftSideMenu.css"
+import style from "./LeftSideMenu.module.css"
 import { IoMdCloseCircleOutline } from "react-icons/io";
 const LeftSideMenu = () => {
   return (
-    <section className='left-men-cont'>
-        <ul className='nav-body-cont'>
-            <button className='left-cls-btn'><IoMdCloseCircleOutline/></button>
-            <li className='nav-list'>Matrimony</li>
-            <li className='nav-list'>Dating</li>
-            <li className='nav-list'>E commerce</li>
-            <li className='nav-list'>Study abroad</li>
-            <li className='nav-list'>Job portal</li>
+    <section className={style['left-men-cont']}>
+        <ul className={style['nav-body-cont']}>
+            <button className={style['left-cls-btn']}><IoMdCloseCircleOutline/></button>
+            <li className={style['nav-list']}>Matrimony</li>
+            <li className={style['nav-list']}>Dating</li>
+            <li className={style['nav-list']}>E commerce</li>
+            <li className={style['nav-list']}>Study abroad</li>
+            <li className={style['nav-list']}>Job portal</li>
         </ul>
     </section>
   )
