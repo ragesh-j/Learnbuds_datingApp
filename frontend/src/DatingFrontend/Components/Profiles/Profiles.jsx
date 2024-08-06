@@ -21,7 +21,7 @@ const Profiles = () => {
     <section className={styles.profiles}>
       <Row>
         {profiles.map((profile, index) => (
-          <Col xs={12} sm={6} md={4} lg={2} className="mb-4" key={index}>
+          <div key={index} className={`${styles.col} ${styles['col-xs-6']} ${styles['col-md-4']} ${styles['col-lg-2']} ${styles.marginBottom4}`}>
             <div className={styles.profileCard}>
               <Image src={profile.img} rounded />
               <div className={styles.status}>Online</div>
@@ -35,7 +35,7 @@ const Profiles = () => {
                 <button className={styles.iconButton}><FontAwesomeIcon icon={faEllipsisH} /></button>
               </div>
             </div>
-          </Col>
+          </div>
         ))}
       </Row>
     </section>

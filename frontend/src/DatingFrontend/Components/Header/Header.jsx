@@ -8,13 +8,13 @@ const Header = () => {
   return (
     <header className={`d-flex justify-content-between align-items-center p-3 ${styles.header}`}>
       <div className="d-flex align-items-center">
-        <FontAwesomeIcon icon={faBars} size="lg" className={styles.menuIcon} />
+        <FontAwesomeIcon icon={faBars}  className={styles.menuIcon} />
         <h1 className={styles.title}>BuddyPair</h1>
       </div>
       <div className="d-flex align-items-center">
         <div className={styles.notificationIcon}>
           <div className={styles.iconCircle}>
-            <FontAwesomeIcon icon={faBellRegular} size="lg" />
+            <FontAwesomeIcon icon={faBellRegular}  />
             <div className={styles.notificationDot}></div>
           </div>
         </div>

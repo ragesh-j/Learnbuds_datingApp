@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSlidersH, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import styles from './designationPage.module.css';
@@ -41,7 +41,7 @@ const DesignationPage = () => {
 
       <Row className={styles.matchContainer}>
         {matches.map((match, index) => (
-          <Col xs={6} md={4} lg={2} key={index} className="mb-4">
+          <div key={index} className={`${styles.col} ${styles['col-xs-6']} ${styles['col-md-4']} ${styles['col-lg-2']} ${styles.marginBottom4}`}>
             <ProfileCard
               matchPercentage={match.match}
               imageUrl={match.img}
@@ -50,7 +50,7 @@ const DesignationPage = () => {
               age={match.age}
               location={match.location}
             />
-          </Col>
+          </div>
         ))}
       </Row>
 

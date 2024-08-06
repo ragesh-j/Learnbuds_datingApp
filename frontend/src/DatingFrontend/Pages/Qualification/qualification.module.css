@@ -36,6 +36,7 @@
   color: #000;
   text-align: left;
   margin-left: 15px;
+  margin-bottom: 20px;
 }
 
 .matchCountNumber {
@@ -111,7 +112,7 @@
 }
 
 .marginBottom4 {
-  margin-bottom: 1.5rem; /* Equivalent to mb-4 in Bootstrap */
+  margin-bottom: 1.5rem; 
 }
 
 @keyframes slideDown {
