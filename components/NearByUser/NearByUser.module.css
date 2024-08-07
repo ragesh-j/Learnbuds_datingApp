@@ -23,12 +23,13 @@
     width: 50%;
 }
 .body{
-    height: 80%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: center;
     gap: 10px;
+    /* justify-content: space-between; */
 }
 .body>h1{
     font-size: 14px;
@@ -63,6 +64,8 @@
     padding-left: 10px;
     padding-right: 10px;
     border: none;
+    display: flex;
+    gap: 2px;
 }
 .name-cont{
     display: flex;
