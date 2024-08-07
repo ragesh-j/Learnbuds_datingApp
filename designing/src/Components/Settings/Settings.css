@@ -1,0 +1,165 @@
+.settings-container {
+    font-family: Arial, sans-serif;
+    color: #000;
+    /* padding: 20px; */
+    max-width: 600px;
+    margin: auto;
+    background-color: #5d1451;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #5d1451; */
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    height: 100px;
+}
+
+.settings-heading {
+    margin: 0;
+    font-size: 30px;
+}
+
+.settings-icon {
+    width: 47px;
+    height: 47px;
+    background: #e295d5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    font-size: 22px;
+    position: absolute;
+    left: 30px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 50px 50px 0 0;
+    margin-top: 20px;
+    position: relative;
+    background-color: #fff;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.profile-info {
+    text-align: left;
+    display: grid;
+    margin-left: 85px;
+    letter-spacing: 2px;
+    margin-top: 18px;
+}
+
+.profile-info h3 {
+    margin: 0;
+}
+
+.profile-info p {
+    margin: 0;
+    color: #777;
+}
+
+.qr-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+    color: rgb(3, 139, 139);
+}
+
+.settings-list {
+    margin-top: 0px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    justify-content: flex-start;
+}
+
+.settings-item h4 {
+    margin: 0;
+}
+
+.settings-item p {
+    margin: 0;
+    color: #777;
+}
+
+.settings-item i {
+    font-size: 24px;
+    margin-right: 15px;
+    color: silver;
+}
+
+@media (max-width: 600px) {
+
+    .settings-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .settings-header {
+        align-items: center;
+
+    }
+
+    .settings-heading {
+        font-size: 25px;
+    }
+
+    .profile-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .profile-pic {
+        margin: 0;
+    }
+
+    .profile-info {
+        margin-left: 90px;
+    }
+
+    .qr-icon {
+        position: static;
+        margin-left: auto;
+    }
+
+    .settings-list {
+        padding: 20px;
+    }
+
+    .settings-item {
+        align-items: center;
+        text-align: left;
+        gap: 30px;
+    }
+
+    .settings-item i {
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    .settings-item h4,
+    .settings-item p {
+        margin: 6px;
+    }
+}
