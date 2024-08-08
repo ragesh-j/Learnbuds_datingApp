@@ -5,6 +5,7 @@ import Settings from './Components/Settings/Settings'
 import PrivacySettings from './Components/PrivacySettings/PrivacySettings'
 import UpgradeView from './Components/UpgradeView/UpgradeView'
 import OwnProfileView from './Components/OwnProfileView/OwnProfileView'
+import Subscription from './Components/Subscription/Subscription'
 function App() {
 
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path='/privacysettings' element={<PrivacySettings />} />
         <Route path='/upgradeview' element={<UpgradeView />} />
         <Route path='/ownProfileview' element={<OwnProfileView />} />
+        <Route path='/subscription' element={<Subscription />} />
+
 
 
 

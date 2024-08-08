@@ -30,17 +30,6 @@ html {
     text-align: center;
 }
 
-/* .top-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-} */
-
 .top-container>* {
     position: relative;
     z-index: 2;
@@ -179,8 +168,7 @@ html {
     width: 100%;
     background-color: #fff;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    /* border-top-left-radius: 50px;
-    border-top-right-radius: 50px; */
+
 }
 
 .about {
@@ -244,6 +232,57 @@ html {
     font-size: 16px;
 }
 
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.979);
+    border-top: 1px solid #f8eeee;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    margin-bottom: 20px;
+    height: 45px;
+    margin-left: 8%;
+}
+
+
+.footer-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dislike-button {
+    color: white;
+    background: rgb(253, 175, 146);
+}
+
+.star-button {
+    color: white;
+    background: #5d1451;
+}
+
+.like-button {
+    color: white;
+    background: rgb(240, 127, 215);
+}
+
+.chat-button {
+    color: white;
+    background: rgb(238, 181, 226);
+}
+
 @media (max-width: 768px) {
     .top-container {
         height: 40vh;
@@ -269,6 +308,10 @@ html {
 
     .match-text {
         font-size: 18px;
+    }
+
+    .footer-button {
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -369,5 +412,8 @@ html {
         width: 100px;
         font-size: 14px;
         flex: 0 0 auto;
+    }
+    .footer-container{
+        margin-left: 5%;
     }
 }

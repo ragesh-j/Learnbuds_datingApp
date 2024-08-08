@@ -55,7 +55,18 @@ const ProfileView = () => {
                         <span className="interest-tag">✍️ Writing</span>
                     </div>
                 </div>
+                {/* </div> */}
+
+                <div className="footer-container">
+                    <button className="footer-button dislike-button">X</button>
+                    <button className="footer-button star-button">★</button>
+                    <button className="footer-button like-button">
+                        <i className="fas fa-heart"></i>
+                    </button>
+                    <button className="footer-button chat-button">💬</button>
+                </div>
             </div>
+
         </div>
     );
 };

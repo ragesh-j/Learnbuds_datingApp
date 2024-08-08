@@ -1,0 +1,146 @@
+.subscription-container {
+    background-color: #5c1059;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.subscription-header h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.subscription-details {
+    background-color: #000;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    /* margin-top: 50px; */
+    max-width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.subscription-details h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.subscription-limits .limit-item {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.subscription-limits .limit-item p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.subscription-limits ul {
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+.subscription-limits li {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    list-style: none;
+}
+
+.limits-points.day li,
+.limits-points.weekly li {
+    margin-left: 50px;
+}
+
+.limits-points.monthly li,
+.limits-points.premium li {
+    margin-left: 40px;
+    list-style: disc;
+    list-style-position: inside;
+    padding-left: 15px;
+    display: list-item;
+}
+
+.checkmark {
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 12px;
+    background: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe-btn {
+    background-color: #777;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.subscribe-btn:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .subscription-details {
+        width: 100%;
+        padding: 20px;
+        margin-top: 30px;
+
+    }
+
+    .price {
+        font-size: 28px;
+    }
+
+    .subscribe-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+        width: 90%;
+
+    }
+}
+
+@media (min-width: 1024px) {
+    .subscription-container {
+        padding: 40px;
+    }
+
+    .subscription-details {
+        max-width: 700px;
+        padding: 40px;
+    }
+
+    .price {
+        font-size: 40px;
+    }
+
+    .subscribe-btn {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+}
