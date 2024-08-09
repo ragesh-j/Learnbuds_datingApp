@@ -44,6 +44,7 @@ const PrivacySettings = () => {
                         <span className="value">today at 18:34, Safari 198.123.23.23</span>
                     </div>
                 </div>
+    
                 <div className="section">
                     <div className="item">
                         <span className="label">Total active sessions (5)</span>

@@ -1,13 +1,11 @@
 .privacySettings-container {
-    max-width: 800px;
     margin: 0 auto;
-    background-color: #4b0d52;
+    background-color: #5d1451;
     font-family: Arial, sans-serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
-/* Header */
 .header {
     display: flex;
     align-items: center;
@@ -123,7 +121,7 @@ input:checked+.slider:before {
 }
 
 .reset-button {
-    width: 100%;
+    width: 70%;
     background-color: #4b0d52;
     color: #fff;
     border: none;
@@ -131,6 +129,7 @@ input:checked+.slider:before {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 16px;
+    margin-left: 15%;
 }
 
 .reset-button i {
