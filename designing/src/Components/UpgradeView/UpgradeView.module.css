@@ -27,7 +27,7 @@
     font-weight: bold;
 }
 
-.upgrade-btn {
+.upgradeBtn {
     background-color: #5c1059;
     color: #fff;
     border: none;
@@ -37,7 +37,7 @@
     font-size: 16px;
 }
 
-.upgrade-btn:hover {
+.upgradeBtn:hover {
     background-color: #450843;
 }
 
@@ -51,7 +51,7 @@
         font-size: 18px;
     }
 
-    .upgrade-btn {
+    .upgradeBtn {
         font-size: 14px;
         padding: 8px 16px;
     }

@@ -7,7 +7,6 @@ import UpgradeView from './Components/UpgradeView/UpgradeView'
 import OwnProfileView from './Components/OwnProfileView/OwnProfileView'
 import Subscription from './Components/Subscription/Subscription'
 function App() {
-
   return (
     <div>
       <Routes>

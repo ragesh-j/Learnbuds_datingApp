@@ -1,4 +1,4 @@
-.privacySettings-container {
+.privacySettingsContainer {
     margin: 0 auto;
     background-color: #5d1451;
     font-family: Arial, sans-serif;
@@ -16,7 +16,7 @@
     border-radius: 10px 10px 0 0;
 }
 
-.search-icon {
+.searchIcon {
     width: 45px;
     height: 45px;
     background-color: #e295d5;
@@ -31,7 +31,7 @@
 
 .header h1 {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .content {
@@ -45,7 +45,7 @@
     padding: 12px 0;
 }
 
-.section:last-child {
+.sectionLastChild {
     border-bottom: none;
 }
 
@@ -55,7 +55,6 @@
     align-items: center;
     padding: 12px 0;
     cursor: pointer;
-
 }
 
 .label {
@@ -64,16 +63,16 @@
 }
 
 .value,
-.change-password {
+.changePassword {
     color: #555;
 }
 
-.change-password {
+.changePassword {
     color: #007bff;
     text-decoration: none;
 }
 
-.change-password:hover {
+.changePassword:hover {
     text-decoration: underline;
 }
 
@@ -84,7 +83,7 @@
     height: 20px;
 }
 
-.switch input {
+.switchInput {
     display: none;
 }
 
@@ -120,7 +119,7 @@ input:checked+.slider:before {
     transform: translateX(14px);
 }
 
-.reset-button {
+.resetButton {
     width: 70%;
     background-color: #4b0d52;
     color: #fff;
@@ -132,11 +131,11 @@ input:checked+.slider:before {
     margin-left: 15%;
 }
 
-.reset-button i {
+.resetButton i {
     margin-right: 8px;
 }
 
-.reset-button:hover {
+.resetButtonHover:hover {
     background-color: #3a0b41;
 }
 
@@ -151,22 +150,22 @@ input:checked+.slider:before {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 350px) {
     .header {
         margin-right: 60px;
     }
 
-    .header h1 {
+    .headerTitle {
         font-size: 18px;
         letter-spacing: 1px;
     }
 
-    .search-icon {
+    .searchIcon {
         margin-left: 70px;
     }
-    .reset-button{
+
+    .resetButton {
         width: 70%;
         margin-left: 120px;
     }
-
 }

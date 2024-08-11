@@ -1,74 +1,119 @@
 import React from 'react';
-import './ProfileView.css';
-
-//  use this if not upgraded
-import UpgradeView from '../UpgradeView/UpgradeView';
-
+import styles from './ProfileView.module.css';
+import backgroundImage from '../../assets/ladyImage1.jpg';
+import upgradeView from '../UpgradeView/UpgradeView'
 
 const ProfileView = () => {
     return (
-        <div className='profileView-container'>
-            <div className="top-container torch-effect">
-                <div className="topLeftArrow">
+        <div
+            className={styles.profileViewContainer}
+            style={{
+                background: `url(${backgroundImage}) no-repeat center center`,
+                backgroundSize: 'cover'
+            }}
+        >
+            <div className={`${styles.topContainer} ${styles.torchEffect}`}>
+                <div className={styles.topLeftArrow}>
                     <i className="fas fa-less-than"></i>
                 </div>
 
-                <div className="topRightLocation">
+                <div className={styles.topRightLocation}>
                     <i className="fa-solid fa-location-arrow"></i>
                     <p>2.5 km</p>
-                    {/* <p>Edit</p> */}
-
                 </div>
 
-                <div className="userDetails">
-                    <p className="username">Alfredo Calzoni, <span>20</span></p>
-                    <p className="userPlace">HAMBURG, GERMANY</p>
+                <div className={styles.userDetails}>
+                    <p className={styles.username}>Alfredo Calzoni, <span>20</span></p>
+                    <p className={styles.userPlace}>HAMBURG, GERMANY</p>
                 </div>
 
-                <div className="matching-container">
-                    <div className="matching-percentage">
-                        <div className="circle">
-                            <div className="inner-circle">
-                                <p className="percentage-number">80</p>
-                                <p className="percentageIcon">%</p>
+                <div className={styles.matchingContainer}>
+                    <div className={styles.matchingPercentage}>
+                        <div className={styles.circle}>
+                            <div className={styles.innerCircle}>
+                                <p className={styles.percentageNumber}>80</p>
+                                <p className={styles.percentageIcon}>%</p>
                             </div>
                         </div>
                     </div>
-                    <p className="match-text">Match</p>
-                    {/* <p className="match-text">Profile Complete</p> */}
-
-
+                    <p className={styles.matchText}>Match</p>
                 </div>
             </div>
 
-            <div className="bottom-container">
-                <div className="about">
-                    <p className='about-heading'>About</p>
-                    <p className='about-content'>A good listener. I love having a good talk to know each other’s side 😍.</p>
+            <div className={styles.bottomContainer}>
+                <div className={styles.about}>
+                    <p className={styles.aboutHeading}>About</p>
+                    <p className={styles.aboutContent}>A good listener. I love having a good talk to know each other's side 😍.</p>
                 </div>
 
-                <div className="interests">
-                    <p className='interest-heading'>Interest</p>
-                    <div className="interest-tags">
-                        <span className="interest-tag">🌿 Nature</span>
-                        <span className="interest-tag">🏝️ Travel</span>
-                        <span className="interest-tag">✍️ Writing</span>
+                <div className={styles.interests}>
+                    <p className={styles.interestHeading}>Interest</p>
+                    <div className={styles.interestTags}>
+                        <span className={styles.interestTag}>🌿 Nature</span>
+                        <span className={styles.interestTag}>🏝️ Travel</span>
+                        <span className={styles.interestTag}>✍️ Writing</span>
                     </div>
                 </div>
-                {/* </div> */}
 
-                <div className="footer-container">
-                    <button className="footer-button dislike-button">X</button>
-                    <button className="footer-button star-button">★</button>
-                    <button className="footer-button like-button">
+                <div className={styles.footerContainer}>
+                    <button className={`${styles.footerButton} ${styles.dislikeButton}`}>X</button>
+                    <button className={`${styles.footerButton} ${styles.starButton}`}>★</button>
+                    <button className={`${styles.footerButton} ${styles.likeButton}`}>
                         <i className="fas fa-heart"></i>
                     </button>
-                    <button className="footer-button chat-button">💬</button>
+                    <button className={`${styles.footerButton} ${styles.chatButton}`}>💬</button>
                 </div>
             </div>
-
         </div>
     );
 };
 
 export default ProfileView;
+
+// import React from 'react';
+// import styles from './ProfileView.module.css';
+
+// const ProfileView = () => {
+//     return (
+//         <div className={styles.container}>
+//             <div className={styles.header}>
+//                 <button className={styles.backButton}>{'<'}</button>
+//                 <div className={styles.distance}>
+//                     <span>{'⌄'} 2.5 km</span>
+//                 </div>
+//             </div>
+
+//             <div className={styles.profileInfo}>
+//                 <h1 className={styles.name}>Alfredo Calzoni, 20</h1>
+//                 <p className={styles.location}>HAMBURG, GERMANY</p>
+//                 <div className={styles.matchButton}>
+//                     <span className={styles.matchPercentage}>80%</span>
+//                     <span className={styles.matchText}>Match</span>
+//                 </div>
+//             </div>
+
+//             <div className={styles.content}>
+//                 <h2 className={styles.sectionTitle}>About</h2>
+//                 <p className={styles.aboutText}>
+//                     A good listener. I love having a good talk to know each other's side 😍.
+//                 </p>
+
+//                 <h2 className={styles.sectionTitle}>Interest</h2>
+//                 <div className={styles.interests}>
+//                     <span className={styles.interestTag}>🌿 Nature</span>
+//                     <span className={styles.interestTag}>🏝️ Travel</span>
+//                     <span className={styles.interestTag}>✍️ Writing</span>
+//                 </div>
+
+//                 <div className={styles.actionButtons}>
+//                     <button className={`${styles.actionButton} ${styles.dislikeButton}`}>✕</button>
+//                     <button className={`${styles.actionButton} ${styles.starButton}`}>★</button>
+//                     <button className={`${styles.actionButton} ${styles.likeButton}`}>♥</button>
+//                     <button className={`${styles.actionButton} ${styles.chatButton}`}>💬</button>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default ProfileView;

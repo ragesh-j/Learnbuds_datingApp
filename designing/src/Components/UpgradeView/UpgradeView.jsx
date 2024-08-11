@@ -1,12 +1,12 @@
 import React from 'react';
-import './UpgradeView.css';
+import styles from './UpgradeView.module.css';
 
 const UpgradeView = () => {
     return (
-        <div className="overlay">
-            <div className="popup">
+        <div className={styles.overlay}>
+            <div className={styles.popup}>
                 <p>Upgrade to view Profile</p>
-                <button className="upgrade-btn">Upgrade</button>
+                <button className={styles.upgradeBtn}>Upgrade</button>
             </div>
         </div>
     );

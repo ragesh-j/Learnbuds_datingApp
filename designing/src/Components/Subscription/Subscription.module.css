@@ -1,0 +1,224 @@
+.subscriptionContainer {
+    background-color: #5c1059;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.subscriptionHeader h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.subscriptionDetails {
+    background-color: #000;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.subscriptionDetails h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.subscriptionLimits .limitItem {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.subscriptionLimits .limitItem p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.subscriptionLimits ul {
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+.subscriptionLimits li {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    list-style: none;
+}
+
+.limitsPoints.day li,
+.limitsPoints.weekly li {
+    margin-left: 30px;
+}
+
+.limitsPoints.monthly li,
+.limitsPoints.premium li {
+    margin-left: 20px;
+    list-style: disc;
+    list-style-position: inside;
+    padding-left: 10px;
+    display: list-item;
+}
+
+.checkmark {
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribeBtn {
+    background-color: #777;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.subscribeBtn:hover {
+    background-color: #555;
+}
+
+@media (min-width: 480px) {
+    .subscriptionContainer {
+        padding: 30px;
+    }
+
+    .subscriptionHeader h2 {
+        font-size: 22px;
+    }
+
+    .subscriptionDetails {
+        padding: 25px;
+    }
+
+    .subscriptionDetails h3 {
+        font-size: 19px;
+    }
+
+    .price {
+        font-size: 26px;
+    }
+
+    .subscriptionLimits .limitItem p {
+        font-size: 17px;
+    }
+
+    .subscriptionLimits li {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .subscriptionContainer {
+        padding: 40px;
+    }
+
+    .subscriptionHeader h2 {
+        font-size: 24px;
+    }
+
+    .subscriptionDetails {
+        padding: 30px;
+    }
+
+    .subscriptionDetails h3 {
+        font-size: 20px;
+    }
+
+    .price {
+        font-size: 28px;
+    }
+
+    .subscriptionLimits .limitItem p {
+        font-size: 18px;
+    }
+
+    .subscriptionLimits li {
+        font-size: 16px;
+    }
+
+    .limitsPoints.day li,
+    .limitsPoints.weekly li {
+        margin-left: 40px;
+    }
+
+    .limitsPoints.monthly li,
+    .limitsPoints.premium li {
+        margin-left: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .subscriptionContainer {
+        padding: 50px;
+    }
+
+    .subscriptionHeader h2 {
+        font-size: 26px;
+    }
+
+    .subscriptionDetails {
+        padding: 40px;
+        max-width: 600px;
+    }
+
+    .subscriptionDetails h3 {
+        font-size: 22px;
+    }
+
+    .price {
+        font-size: 32px;
+    }
+
+    .subscriptionLimits .limitItem p {
+        font-size: 20px;
+    }
+
+    .subscriptionLimits li {
+        font-size: 18px;
+    }
+
+    .limitsPoints.day li,
+    .limitsPoints.weekly li {
+        margin-left: 50px;
+    }
+
+    .limitsPoints.monthly li,
+    .limitsPoints.premium li {
+        margin-left: 40px;
+    }
+
+    .subscribeBtn {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
