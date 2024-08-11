@@ -1,0 +1,43 @@
+.bottomNavbar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0; 
+    z-index: 1000;
+    margin-bottom: 10px;
+}
+
+.navItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.navIcon {
+    font-size: 1.75rem; 
+    color: #a1899f; 
+}
+
+.navItem:nth-child(1) .navIcon {
+    color: #e02991; 
+}
+
+.rainbowIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(red, yellow, green, cyan, blue, magenta, red);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
