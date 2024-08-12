@@ -11,6 +11,7 @@ import UpgradePopup from './DatingFrontend/Pages/UpgradePopup/UpgradePopup';
 import NotFound404 from './DatingFrontend/Pages/NotFound404/NotFound404';
 import NotFound403 from './DatingFrontend/Pages/NotFound403/NotFound403';
 import SubscriptionPlan from './DatingFrontend/Pages/SubscriptionPlan/SubscriptionPlan';
+import AddCards from './DatingFrontend/Pages/AddCards/AddCards';
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/404' element={<NotFound404/>} />
         <Route path='/403' element={<NotFound403/>} />
         <Route path='/subscription' element={<SubscriptionPlan/>} />
+        <Route path='/addCards' element={<AddCards/>} />
 
       </Routes>
     </BrowserRouter>
