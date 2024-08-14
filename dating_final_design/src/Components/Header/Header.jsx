@@ -22,7 +22,7 @@ const Header = ({ pageName, toggleModal }) => {
                 {pageName !== "Message" && (
                     <div className={styles.menuIcon}>
                         <FaBars className={styles.humburgeIcon} onClick={toggleModal} />
-                    </div>
+                    </div> 
                 )}
             </div>
         </header>

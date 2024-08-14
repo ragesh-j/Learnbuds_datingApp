@@ -35,16 +35,15 @@
     padding: 10px;
     color: white;
 }
+
 .Container {
     border-radius: 25px 25px 0 0;
-
     background-color: #ffffff;
     padding: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     top: -30px;
     overflow: hidden;
-
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -56,7 +55,6 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
     scroll-behavior: smooth;
-
     flex-grow: 1;
 }
 
@@ -92,7 +90,7 @@
 }
 
 .groupName {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     flex: 1;
 }
@@ -137,4 +135,96 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .Container {
+        padding: 12px;
+        top: -20px;
+    }
+
+    .groupItem {
+        padding: 10px;
+    }
+
+    .groupName {
+        font-size: 13px;
+    }
+
+    .backIcon {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+    .title {
+        font-size: 22px;
+    }
+
+    .Container {
+        padding: 14px;
+        top: -25px;
+    }
+
+    .groupItem {
+        padding: 12px;
+    }
+
+    .groupName {
+        font-size: 14px;
+    }
+
+    .backIcon {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .Container {
+        padding: 16px;
+        top: -30px;
+    }
+
+    .groupItem {
+        padding: 14px;
+    }
+
+    .groupName {
+        font-size: 15px;
+    }
+
+    .backIcon {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .title {
+        font-size: 26px;
+    }
+
+    .Container {
+        padding: 18px;
+        top: -30px;
+    }
+
+    .groupItem {
+        padding: 16px;
+    }
+
+    .groupName {
+        font-size: 16px;
+    }
+
+    .backIcon {
+        font-size: 26px;
+    }
 }

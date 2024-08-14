@@ -69,7 +69,7 @@ const Contacted = () => {
                                     <p className={styles.contactDate}>{contact.date}</p>
                                 </div>
                                 <div className={styles.contactActions}>
-                                    <FaHeart className={styles.heartIcon} />
+                                    <FaHeart className={styles.heartIcon} />&nbsp;&nbsp;
                                     <FaTimes className={styles.closeIcon} />
                                 </div>
                             </div>
