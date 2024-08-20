@@ -81,6 +81,9 @@ const EditMyProfile = () => {
           </div>
         </div>
       </div>
+      <div className="section-button-section">
+        <input type='button'value='Sumbit' className='edit-profile-submit-button'/>
+      </div>
     </div>
     
        </div>
