@@ -138,7 +138,6 @@ const UserLogin = AsyncHandler(async (req, res, next) => {
 
 const cookieValidation = AsyncHandler(async (req, res, next) => {
   const cookie = req?.headers?.cookie;
-  // console.log("cookie:", cookie);
   if (!cookie) {
     next(new CustomError("No cookie has found!", 401));
     return;
@@ -150,8 +149,6 @@ const cookieValidation = AsyncHandler(async (req, res, next) => {
   }
   const { id } = await jwt.verify(token, process.env.JWT_TOKEN_KEY);
   req.id = id;
-  // console.log(req.id);
-  // return res.json({ message: "ok" });
   next();
 });
 
@@ -163,6 +160,53 @@ const getUserProfile = AsyncHandler(async (req, res, next) => {
     throw new CustomError("No user found!", 401);
   }
   return res.json({ message: "Details fetched!", user });
+});
+
+const editProfile = AsyncHandler(async (req, res, next) => {
+  const { Files, ...body } = req.body;
+  // try {
+  // Create an empty object to store the fields that need to be updated
+  let updateData = {};
+  let updatePersonalDetails = {};
+  let newPersonalDetails;
+
+  // Conditionally add fields to updateData if they exist in the request body
+  for (const key in body) {
+    if (body.hasOwnProperty(key)) {
+      updateData[key] = body[key];
+    }
+  }
+
+  if (Files.length) {
+    const arrayFilters = Files.map((file, index) => ({
+      [`elem${index}.name`]: file.name,
+    }));
+    newPersonalDetails = await PersonalDetails.findOneAndUpdate(
+      { UserId: req.id },
+      { $set: arrayFilters },
+      { new: true, arrayFilters: arrayFilters }
+    );
+  }
+  if (Object.keys(updateData).length > 0) {
+    // Only call findByIdAndUpdate if there's something to update
+    const updatedUser = await User.findByIdAndUpdate(
+      req.id,
+      { $set: updateData },
+      { new: true } // Return the updated document , arrayFilters: arrayFilters
+    );
+    if (updatedUser) {
+      return res.status(200).json({
+        message: "User updated successfully",
+        user: updatedUser,
+      });
+    } else {
+      return res.status(404).json({ message: "User not found" });
+    }
+  } else {
+    return res
+      .status(400)
+      .json({ message: "No valid fields provided for update" });
+  }
 });
 
 const matchedProfiles = AsyncHandler(async (req, res, next) => {
@@ -218,4 +262,5 @@ module.exports = {
   getUserProfile,
   userDetailsRegister,
   getUserIndividualProfile,
+  editProfile,
 };
