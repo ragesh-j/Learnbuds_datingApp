@@ -14,6 +14,7 @@ import RightSideModal from "./Components/RightSideModal/RightSideModal";
 import ViewedMyProfile from "./Pages/ViewedMyProfile/ViewedMyProfile";
 import CreateGroup from "./Pages/CreateGroup/CreateGroup";
 import Groups from "./Pages/Groups/Groups";
+import PartnerPreference from "./Pages/PartnerPreference/PartnerPreference";
 import styles from "./App.module.css"; // Import the CSS module
 
 const App = () => {
@@ -50,6 +51,7 @@ const App = () => {
                         <Route path="/messages" element={<Messages />} />
                         <Route path="/create-group" element={<CreateGroup />} />
                         <Route path="/groups" element={<Groups />} />
+                        <Route path="/partner-preference" element={<PartnerPreference />} />
                     </Routes>
                 </div>
             </div>
