@@ -10,6 +10,8 @@ const Requests = require("../models/RequestModel");
 const mongoose = require("mongoose");
 const PersonalDetails = require("../models/Personaldetails.model");
 const cloudinary = require("../../../middlewares/CloudinarySetup");
+const Employer = require("../models/JobEmployer.Model.js");
+const Employee = require("../models/JobEmployee.model.js");
 const { ObjectId } = mongoose.Types;
 
 const UserSignup = AsyncHandler(async (req, res, next) => {
@@ -107,6 +109,54 @@ const userDetailsRegister = AsyncHandler(async (req, res, next) => {
   return res.json({ message: "Personal details are stored!", status: true });
 });
 
+const userJobStatus = AsyncHandler(async (req, res, next) => {
+  const {
+    JobStatus,
+    CompanyName,
+    Designation,
+    Location,
+    Title,
+    Expertise_level,
+  } = req.body;
+  if (JobStatus === "Employer") {
+    if (
+      !JobStatus ||
+      !CompanyName ||
+      !Designation ||
+      !Location ||
+      JobStatus === "" ||
+      CompanyName === "" ||
+      Designation === "" ||
+      Location === ""
+    ) {
+      return res.json({ message: "All fields are required!" });
+    }
+    const employer = new Employer({
+      User: req.id,
+      JobStatus,
+      CompanyName,
+      Designation,
+      Location,
+    });
+    await employer.save();
+    return res.json({ message: "Recorde saved!", employer });
+  }
+  if (JobStatus === "Employee") {
+    if (!Title || !Expertise_level || Title === "" || Expertise_level === "") {
+      return res.json({ message: "All fields are required!" });
+    }
+    const employee = new Employee({
+      User: req.id,
+      JobStatus,
+      Title,
+      Expertise_level,
+    });
+    await employee.save();
+    return res.json({ message: "Recorde saved!", employee });
+  }
+  return res.json({ message: "Record not saved!" });
+});
+
 const UserLogin = AsyncHandler(async (req, res, next) => {
   const { Password, Email } = req.body;
   if (!Email || !Password || Password === "" || Email === "") {
@@ -164,8 +214,6 @@ const getUserProfile = AsyncHandler(async (req, res, next) => {
 
 const editProfile = AsyncHandler(async (req, res, next) => {
   const { Files, ...body } = req.body;
-  // try {
-  // Create an empty object to store the fields that need to be updated
   let updateData = {};
   let updatePersonalDetails = {};
   let newPersonalDetails;
@@ -173,19 +221,34 @@ const editProfile = AsyncHandler(async (req, res, next) => {
   // Conditionally add fields to updateData if they exist in the request body
   for (const key in body) {
     if (body.hasOwnProperty(key)) {
+      if (key === "Bio") {
+        updatePersonalDetails[key] = body[key];
+        continue;
+      }
       updateData[key] = body[key];
     }
   }
 
-  if (Files.length) {
+  if (Files && Files.length > 0) {
     const arrayFilters = Files.map((file, index) => ({
-      [`elem${index}.name`]: file.name,
+      [`elem${index}.Name`]: file.Name,
     }));
+    const updateOperations = Files.map((file, index) => ({
+      [`Files.$[elem${index}]`]: file, // Update the entire file object or specific fields as needed
+    }));
+    updatePersonalDetails = {
+      ...updatePersonalDetails,
+      $set: Object.assign({}, ...updateOperations),
+    };
     newPersonalDetails = await PersonalDetails.findOneAndUpdate(
       { UserId: req.id },
-      { $set: arrayFilters },
-      { new: true, arrayFilters: arrayFilters }
+      updatePersonalDetails,
+      {
+        new: true,
+        arrayFilters: arrayFilters,
+      }
     );
+    return res.json({ message: "Updated!", newPersonalDetails });
   }
   if (Object.keys(updateData).length > 0) {
     // Only call findByIdAndUpdate if there's something to update
@@ -263,4 +326,5 @@ module.exports = {
   userDetailsRegister,
   getUserIndividualProfile,
   editProfile,
+  userJobStatus,
 };

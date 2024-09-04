@@ -10,12 +10,14 @@ const {
   userDetailsRegister,
   getUserIndividualProfile,
   editProfile,
+  userJobStatus,
 } = require("../controllers/userControllers");
 
 router.post("/signup", UserSignup);
 router.post("/login", UserLogin);
 router.put("/editprofile", cookieValidation, editProfile);
 router.post("/detailsregister", cookieValidation, userDetailsRegister);
+router.post("/jobstatus", cookieValidation, userJobStatus);
 router.get("/profile", cookieValidation, getUserProfile);
 router.get("/matched", cookieValidation, matchedProfiles);
 router.get(
